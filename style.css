@@ -1,0 +1,158 @@
+/*Last Edited by: Garrett Bates 10/01/2024*/
+article{
+    width: clamp(200px, 50%, 600px);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1e1e1e; /* Dark background */
+    color: #ffffff; /* Light text color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for About Me Title -- "Garrett Bates" */
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #e0e0e0;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    transition: transform 2s ease-out; /* Smooth transition for the hover effect */
+}
+
+header {
+    text-align: center;
+}
+
+/* Loading Bar */
+.loading-bar-container {
+    background-color: #444; /* Background for the loading bar */
+    border-radius: 5px;
+    height: 20px;
+    margin: 20px auto;
+    max-width: 645px; /* Limit width of loading bar */
+    overflow: hidden; /* Hide overflow */
+}
+
+.loading-bar {
+    background: linear-gradient(90deg, #303030, #909090, #00ffee); /* Gradient colors */
+    height: 100%;
+    width: 0%; /* Start with no width */
+    animation: load 4s linear forwards; /* Loading animation */
+}
+
+@keyframes load {
+    0% {
+        width: 0%; /* Starting point */
+    }
+    100% {
+        width: 100%; /* End at full width */
+    }
+}
+
+.hidden {
+    display: none; /* Hide elements */
+}
+
+/* Button Styles */
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* SKILLS SECTION */
+.hidden {
+    display: none;
+}
+
+/* Center the "Show More Skills" button */
+#show-skills {
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin-top: 20px; /* Ensure space between the list and button */
+    transition: background-color 0.3s;
+}
+
+#show-skills:hover {
+    background-color: #555;
+}
+
+/* Ensure hidden skills list is centered */
+#skills-list li {
+    text-align: center;
+    margin-bottom: 10px; /* Space between skills */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Keyframes for border animation in a clockwise pattern */
+@keyframes rotateBorder {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Style for the Bio section border with gradient and animation */
+#bio-section {
+    background-color: #444343;
+    padding: 20px;
+    border-radius: 20px; /* Rounded edges */
+    max-width: 600px;
+    margin: 20px auto;
+    position: relative;
+    z-index: 1;
+}
+
+#bio-section:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    border-radius: 20px; /* Same border radius */
+    background: linear-gradient(90deg, rgb(0, 39, 39), rgb(58, 58, 58), rgb(0, 39, 39), rgb(58, 58, 58)); /* Gradient colors */
+    background-size: 300% 300%; /* For smooth animation */
+    z-index: -1; /* Keep the border behind the content */
+    animation: rotateBorder 12s linear infinite; /* Smooth clockwise animation */
+}
+
+/* Optional: Add hover effect to speed up animation */
+#bio-section:hover:before {
+    animation-duration: 5s; /* Speed up on hover */
+}
+
+/* Projects Section */
+.arrow {
+    background-color: rgb(0, 255, 255); /* Arrow background */
+    color: white; /* Arrow text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 10px; /* Padding for button size */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.arrow:hover {
+    background-color: #00ffee; /* Lighter blue on hover */
+}

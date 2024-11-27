@@ -1,0 +1,193 @@
+<!--Last Edited by Garrett Bates Oct 9th 2024-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garrett Bates</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Stylish font -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Add custom styling for the image */
+        #profile-image {
+            max-width: 512px; /* Adjust this value as needed */
+            display: block;
+            margin: 20px auto; /* Center the image */
+            object-fit: cover; /* Ensures the image covers the square dimensions */
+            height: 300px; /* Set a fixed height for the square shape */
+            transition: transform 1s ease, box-shadow 1s ease; /* Animation effect */
+            animation: loadingAnimation 4s ease-in-out forwards; /* Image loading animation */
+        }
+
+        /* Loading animation for the image */
+        @keyframes loadingAnimation {
+            0% {
+                transform: scale(0.2); /* Start smaller */
+                opacity: 1; /* Start invisible */
+            }
+            35% {
+                opacity: 1; /* Fade in */
+            }
+            100% {
+                transform: scale(1); /* Scale to normal size */
+            }
+        }
+
+        /* Hover effect for the profile image */
+        #profile-image:hover {
+            transform: scale(1.1); /* Scale up the image */
+            box-shadow: 0 4px 20px rgba(0, 255, 251, 0.5); /* Add shadow */
+        }
+    </style>
+</head>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garrett Bates</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Garrett Bates</h1>
+        <div class="loading-bar-container">
+            <div class="loading-bar"></div>
+        </div>
+        <img src="/Users/garrettbates/Documents/IT/CODE/About Me/Assets/profile.jpg" alt="Profile Picture" id="profile-image">
+    </header>
+
+
+    <!-- Bio Section -->
+    <section id="bio-section" style="background-color: #444343; padding: 20px; border-radius: 10px; max-width: 600px; margin: 20px auto;">
+        <h2 id="bio-heading" style="font-size: 24px; font-weight: bold; color: #e0e0e0; text-align: center; padding: 10px;">
+            <span class="bio-box" style="display: inline-block; padding: 10px 20px; border-radius: 8px; font-size: 24px;">
+                About Me
+            </span>
+        </h2>
+        <p id="bio-text" style="font-size: 18px; line-height: 2.5; max-width: 100%; margin: 0 auto; color: #e0e0e0;">
+            My name is Garrett Bates. I was born in 1997, my favorite color is blue, and I'm passionate about IT & Cybersecurity. 
+            I served in the United States Air Force for 4 years, and despite being a disabled Veteran, I continue to embrace every challenge with resilience & determination. 
+            Family is paramount to who I am. I cherish moments spent with loved ones and enjoy being there for them. Serving my church and volunteering in the Tri-Cities community fills me with purpose, allowing me to give back and connect with others in meaningful ways. 
+            Outside of my technical interests, I'm an explorer at heart. Whether discovering new places through travel or diving deep into new areas of technology, I'm always looking to broaden my horizons. 
+            Not to mention, I have a particular love for coffee, which fuels both my adventures and work. 
+        </p>
+    </section>
+
+    
+    <!-- Skills Section -->
+    <section id="skills-section" style="background-color: #444343; padding: 20px; border-radius: 10px; max-width: 600px; margin: 20px auto; text-align: center;">
+        <h2 style="font-size: 24px; font-weight: bold; color: #e0e0e0; padding: 10px;">Skills</h2>
+        <div style="font-size: 18px; line-height: 1.8; color: #00ffee;">
+            <p>Cybersecurity</p>
+            <p>Communication</p>
+            <p>Data Visualization</p>
+            <p>Network Security</p>
+            <p>Digital Forensics</p>
+        </div>
+        <ul id="skills-list" class="hidden" style="font-size: 18px; line-height: 1.8; color: #e0e0e0; list-style-type: none; padding: 0;">
+            <li>Content Creation</li>
+            <li>Cinematography</li>
+            <li>Photography</li>
+            <li>Motorcycle Riding</li>
+            <li>Drone Pilot</li>
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+        </ul>
+        <button id="show-skills" style="display: block; margin: 10px auto;">Show More Skills</button>
+    </section>
+    
+
+    <!-- Education Section -->
+    <section id="education-section" style="background-color: #444343; padding: 20px; border-radius: 10px; max-width: 600px; margin: 20px auto; text-align: center;">
+        <h2 style="font-size: 24px; font-weight: bold; color: #e0e0e0; margin-bottom: 15px;">Education</h2>
+        
+        <p style="font-size: 18px; line-height: 1.8; color: #e0e0e0; margin-bottom: 10px;">
+            *Bachelor's of Science in <span style="color: #00ffee; font-weight: bold;">Cybersecurity</span style="color: #e0e0e0; font-weight: bold;">.
+        </p>
+        
+        <p style="font-size: 18px; line-height: 1.8; color: #e0e0e0; margin-bottom: 10px;">
+            American Military University, Graduated October 1st, 2024.
+        </p>
+        
+        <p style="font-size: 18px; line-height: 1.8; color: #e0e0e0; margin-bottom: 10px;">
+            Currently pursuing a Master's in Information Systems (GPA 3.6).
+        </p>
+    </section>    
+    
+
+ <!-- Projects Section -->
+    <section id="projects-section" style="background-color: #444343; padding: 20px; border-radius: 10px; max-width: 600px; margin: 20px auto;">
+        <h2 style="font-size: 24px; font-weight: bold; color: #e0e0e0; text-align: center; padding: 10px;">Projects</h2>
+    
+        <div class="project" style="text-align: center;">
+            <h3 style="font-size: 20px; color: #00ffee;">Home Labs</h3>
+            <div class="carousel" style="position: relative; display: inline-block;">
+                <button class="arrow left-arrow" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background-color: rgb(0, 255, 255); color: rgb(124, 124, 124); border: none; border-radius: 5px; cursor: pointer;">&#9664;</button>
+                <img id="pc-image" src="image1.jpg" alt="Custom PC" style="width: 100%; max-width: 400px; border-radius: 10px;"/>
+                <button class="arrow right-arrow" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background-color: rgb(0, 255, 255); color: rgb(124, 124, 124); border: none; border-radius: 5px; cursor: pointer;">&#9654;</button>
+            </div>
+            <p>Through home labs I've created custom built PC's, gained experience with carious network configurations and provided a penetration testing environment with Virtual Machine's suitable for the best cybersecurity practices. </p>
+        </div>
+    
+        <div class="project" style="text-align: center;">
+            <h3 style="font-size: 20px; color: #00ffee;">Content Creation</h3>
+            <div class="carousel" style="position: relative; display: inline-block;">
+                <button class="arrow left-arrow" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background-color: rgb(0, 255, 255); color: rgb(124, 124, 124); border: none; border-radius: 5px; cursor: pointer;">&#9664;</button>
+                <img id="lab-image" src="image2.jpg" alt="Pen-Testing Lab" style="width: 100%; max-width: 400px; border-radius: 10px;"/>
+                <button class="arrow right-arrow" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background-color: rgb(0, 255, 255); color: rgb(124, 124, 124); border: none; border-radius: 5px; cursor: pointer;">&#9654;</button>
+            </div>
+            <p>Aside from security, content creation plays a role in IT to keep visuals interesting and UI engaging. </p>
+        </div>
+    
+        <div class="project" style="text-align: center;">
+            <h3 style="font-size: 20px; color: #00ffee;">Code & AI integration</h3>
+            <div class="carousel" style="position: relative; display: inline-block;">
+                <button class="arrow left-arrow" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background-color: rgb(0, 255, 255); color: rgb(124, 124, 124); border: none; border-radius: 5px; cursor: pointer;">&#9664;</button>
+                <img id="ai-image" src="image3.jpg" alt="AI Experimentation" style="width: 100%; max-width: 400px; border-radius: 10px;"/>
+                <button class="arrow right-arrow" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background-color: rgb(0, 255, 255); color: rgb(124, 124, 124); border: none; border-radius: 5px; cursor: pointer;">&#9654;</button>
+            </div>
+            <p>Above are examples of various websites created by me with custom plugins to aid with website security and enhance cybersecurity skills while learning practical applications.</p>
+        </div>
+    </section>
+    
+
+    <!-- Hobbies Section -->
+    <section id="hobbies-section" style="background-color: #444343; padding: 20px; border-radius: 10px; max-width: 600px; margin: 20px auto;">
+        <h2 style="font-size: 24px; font-weight: bold; color: #e0e0e0; text-align: center; padding: 10px;">Hobbies</h2>
+        <p id="hobbies-text" style="font-size: 18px; line-height: 2.5; color: #e0e0e0;">
+            In my free time, I prioritize spending quality time with my family. However, I'm also a motorcycle and car enthusiast; 
+            I love delving into everything related to IT & Cybersecurity, particularly in setting up networks and coding.
+            I take pride in assembling over 24 custom PCs, establishing home networks, creating pen-testing labs, and experimenting with AI. 
+            While I possess knowledge of Windows and various Linux distributions like Kali Linux, Ubuntu, and Parrot OS, I favor Mac OS over Windows.
+        </p>
+        <p id="more-hobbies" class="hidden" style="font-size: 18px; line-height: 2.5; color: #e0e0e0;">
+            Before sustaining various injuries, I was into surfing and snowboarding, I also enjoyed running while maintaining my fitness. 
+            I'm a coffee connoisseur (local coffee is always better), and I still have a strong passion for traveling. 
+            Additionally, I'm drawn to flying FPV drones, I'm an avid content creator and I enjoy photography and video editing.
+        </p>
+        <button id="show-hobbies" style="display: block; margin: 10px auto;">Show More</button>
+    </section>
+    
+
+    <!-- Contact Section -->
+    <section id="contact-section" style="background-color: #444343; padding: 20px; border-radius: 10px; max-width: 600px; margin: 20px auto;">
+        <h2 style="font-size: 24px; font-weight: bold; line-height: 1.5; color: #e0e0e0; text-align: center; padding: 18px;">Contact</h2>
+        <p id="contact-info" class="hidden" style="font-size: 18px; color: #e0e0e0; line-height: 2;">
+            Email: <a href="mailto:garrettbates00@gmail.com" style="color: #00ffee;">garrettbates00@gmail.com</a><br>
+            Phone: <a href="(406) 402-7832" style="color: #00ffee;">(406) 402-7832</a><br>
+            LinkedIn: <a href="https://www.linkedin.com/in/g-bates/" style="color: #00ffee;">Garrett Bates</a><br>
+        </p>
+        <button id="show-contact" style="display: block; margin: 10px auto;">Show Contact Info</button>
+    </section>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
