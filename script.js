@@ -105,3 +105,9 @@ document.querySelectorAll('.project').forEach(project => {
         $(this).text($('#contact-info').hasClass('hidden') ? 'Show Contact Info' : 'Hide Contact Info');
     });
 });
+
+//preload
+images.forEach(src => {
+    const img = new Image();
+    img.src = src;
+});
