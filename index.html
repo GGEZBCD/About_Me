@@ -127,14 +127,55 @@
         <h2 style="font-size: 24px; font-weight: bold; color: #e0e0e0; text-align: center; padding: 10px;">Projects</h2>
     
         <div class="project" style="text-align: center;">
-            <h3 style="font-size: 20px; color: #00ffee;">Home Labs</h3>
-            <div class="carousel" style="position: relative; display: inline-block;">
-                <button class="arrow left-arrow" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background-color: rgb(0, 255, 255); color: rgb(124, 124, 124); border: none; border-radius: 5px; cursor: pointer;">&#9664;</button>
-                <img id="pc-image" src="image1.jpg" alt="Custom PC" style="width: 100%; max-width: 400px; border-radius: 10px;"/>
-                <button class="arrow right-arrow" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background-color: rgb(0, 255, 255); color: rgb(124, 124, 124); border: none; border-radius: 5px; cursor: pointer;">&#9654;</button>
-            </div>
-            <p>Through home labs I've created custom built PC's, gained experience with carious network configurations and provided a penetration testing environment with Virtual Machine's suitable for the best cybersecurity practices. </p>
-        </div>
+    <h3 style="font-size: 20px; color: #00ffee;">Home Labs</h3>
+    <div class="carousel" style="position: relative; display: inline-block;">
+        <!-- Left Arrow -->
+        <button class="arrow left-arrow" 
+            style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background-color: rgb(0, 255, 255); color: rgb(124, 124, 124); border: none; border-radius: 5px; cursor: pointer;">
+            &#9664;
+        </button>
+
+        <!-- Image -->
+        <img id="pc-image" src="image1.jpg" alt="Custom PC" 
+            style="width: 100%; max-width: 400px; border-radius: 10px;"/>
+
+        <!-- Right Arrow -->
+        <button class="arrow right-arrow" 
+            style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background-color: rgb(0, 255, 255); color: rgb(124, 124, 124); border: none; border-radius: 5px; cursor: pointer;">
+            &#9654;
+        </button>
+    </div>
+
+    <p>Through home labs I've created custom-built PCs, gained experience with various network configurations, and provided a penetration testing environment with Virtual Machines suitable for the best cybersecurity practices.</p>
+</div>
+
+<script>
+    // Array of image paths
+    const images = [
+        "https://github.com/GGEZBCD/About_Me/blob/main/Assets/homelab1.PNG?raw=true", // Use Copy and Paste Method for Image Paths to simplify processes. 
+        "https://github.com/GGEZBCD/About_Me/blob/main/Assets/homelab2.PNG?raw=true",
+        "https://github.com/GGEZBCD/About_Me/blob/main/Assets/homelab3.PNG?raw=true"
+    ];
+
+    let currentImageIndex = 0;
+
+    // DOM Elements
+    const pcImage = document.getElementById('pc-image');
+    const leftArrow = document.querySelector('.left-arrow');
+    const rightArrow = document.querySelector('.right-arrow');
+
+    // Event Listeners for Arrows
+    leftArrow.addEventListener('click', () => {
+        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        pcImage.src = images[currentImageIndex];
+    });
+
+    rightArrow.addEventListener('click', () => {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        pcImage.src = images[currentImageIndex];
+    });
+</script>
+
     
         <div class="project" style="text-align: center;">
             <h3 style="font-size: 20px; color: #00ffee;">Content Creation</h3>
