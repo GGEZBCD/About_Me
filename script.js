@@ -1,4 +1,4 @@
-//Last Edited by: Garrett Bates (10/1/2024)
+//Last Edited by: Garrett Bates (11/29/2024)
 
 $(document).ready(function() { 
     const $header = $('h1');
@@ -111,3 +111,44 @@ images.forEach(src => {
     const img = new Image();
     img.src = src;
 });
+
+// Array of GitHub-hosted image paths
+const images = [
+    "https://github.com/GGEZBCD/About_Me/blob/main/Assets/homelab1.PNG?raw=true",
+    "https://github.com/GGEZBCD/About_Me/blob/main/Assets/homelab2.PNG?raw=true",
+    "https://github.com/GGEZBCD/About_Me/blob/main/Assets/homelab3.PNG?raw=true"
+];
+
+let currentImageIndex = 0; // Track the current image index
+
+// DOM Elements
+const pcImage = document.getElementById('pc-image');
+const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelector('.right-arrow');
+
+// Ensure the image element exists
+if (pcImage) {
+    // Event Listener for Left Arrow
+    leftArrow.addEventListener('click', () => {
+        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        updateImage();
+    });
+
+    // Event Listener for Right Arrow
+    rightArrow.addEventListener('click', () => {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        updateImage();
+    });
+
+    // Function to update the image source
+    function updateImage() {
+        if (images[currentImageIndex]) {
+            pcImage.src = images[currentImageIndex];
+        } else {
+            console.error(`Image at index ${currentImageIndex} is undefined.`);
+        }
+    }
+} else {
+    console.error("Image element (pcImage) not found in the DOM.");
+}
+
