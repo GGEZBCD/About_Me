@@ -156,3 +156,23 @@ button:hover {
 .arrow:hover {
     background-color: #00ffee; /* Lighter blue on hover */
 }
+
+/* Custom Scrollbar */
+/* Last Edited by: Garrett Bates 11/28/2024 */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e1e; /* Matches the dark mode background */
+    border-radius: 6px; /* Rounded edges */
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #009ca4, #0000ff); /* Gradient from purple to blue */
+    border-radius: 6px; /* Rounded edges */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #033d43, #1e90ff); /* Slightly lighter gradient on hover */
+}
