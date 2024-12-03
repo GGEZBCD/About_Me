@@ -1,4 +1,6 @@
 //Last Edited by: Garrett Bates (11/29/2024)
+
+
 $(document).ready(function() { 
     const $header = $('h1');
     const movementStrength = 50; // Adjust the strength of the movement (lower value = less movement)
@@ -55,35 +57,36 @@ $(document).ready(function() {
         $(this).text($('#education-text').hasClass('hidden') ? 'Show Education' : 'Hide Education');
     });
 
-    // Image Carousel functionality
-    document.querySelectorAll('.project').forEach(project => {
-        const images = [
-            'image1.jpg', // Replace with actual image URLs
-            'image2.jpg',
-            'image3.jpg'
-        ];
-        let currentIndex = 0;
-        
-        const leftArrow = project.querySelector('.left-arrow');
-        const rightArrow = project.querySelector('.right-arrow');
-        const imgElement = project.querySelector('img');
 
-        // Function to update the image
-        function updateImage() {
-            imgElement.src = images[currentIndex];
-        }
+    // JavaScript for the image carousel functionality
+document.querySelectorAll('.project').forEach(project => {
+    const images = [
+        'image1.jpg', // Replace with actual image URLs
+        'image2.jpg',
+        'image3.jpg'
+    ];
+    let currentIndex = 0;
+    
+    const leftArrow = project.querySelector('.left-arrow');
+    const rightArrow = project.querySelector('.right-arrow');
+    const imgElement = project.querySelector('img');
 
-        // Add event listeners to the arrows
-        leftArrow.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + images.length) % images.length; // Wrap around
-            updateImage();
-        });
+    // Function to update the image
+    function updateImage() {
+        imgElement.src = images[currentIndex];
+    }
 
-        rightArrow.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % images.length; // Wrap around
-            updateImage();
-        });
+    // Add event listeners to the arrows
+    leftArrow.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length; // Wrap around
+        updateImage();
     });
+
+    rightArrow.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length; // Wrap around
+        updateImage();
+    });
+});
 
     // Hobbies Section
     document.getElementById('show-hobbies').addEventListener('click', function() {
@@ -102,13 +105,4 @@ $(document).ready(function() {
         $('#contact-info').toggleClass('hidden');
         $(this).text($('#contact-info').hasClass('hidden') ? 'Show Contact Info' : 'Hide Contact Info');
     });
-});
-
-// JavaScript for Dark Mode Toggle
-const toggleButton = document.getElementById('dark-mode-toggle');
-toggleButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    toggleButton.textContent = document.body.classList.contains('dark-mode')
-        ? 'Disable Dark Mode'
-        : 'Enable Dark Mode';
 });
