@@ -38,10 +38,18 @@
             transform: scale(1.1);
             box-shadow: 0 4px 20px rgba(0, 255, 251, 0.5);
         }
-        
-    <button id="dark-mode-toggle">Enable Dark Mode</button>
-</h1>
 
+        /* Dark mode styles */
+        body {
+            background-color: #f2f2f2; /* Light gray for default */
+            color: #000;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body.dark-mode {
+            background-color: #1a1a1a; /* Very dark gray for dark mode */
+            color: #e0e0e0;
+        }
 
         /* Dark mode button styles */
         #dark-mode-toggle {
@@ -62,6 +70,35 @@
             background-color: #444343;
             color: #fff;
         }
+
+        /* Section styles for dark mode */
+        body.dark-mode #bio-section,
+        body.dark-mode #skills-section,
+        body.dark-mode #education-section,
+        body.dark-mode #hobbies-section,
+        body.dark-mode #contact-section {
+            background-color: #333333;
+        }
+
+        /* Bio section styles */
+        #bio-section, #skills-section, #education-section, #hobbies-section, #contact-section {
+            background-color: #444343;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
     </style>
 </head>
 <body>
@@ -77,13 +114,9 @@
     </header>
 
     <!-- Bio Section -->
-    <section id="bio-section" style="background-color: #444343; padding: 20px; border-radius: 10px; max-width: 600px; margin: 20px auto;">
-        <h2 id="bio-heading" style="font-size: 24px; font-weight: bold; color: #e0e0e0; text-align: center; padding: 10px;">
-            <span class="bio-box" style="display: inline-block; padding: 10px 20px; border-radius: 8px; font-size: 24px;">
-                About Me
-            </span>
-        </h2>
-        <p id="bio-text" style="font-size: 18px; line-height: 2.5; max-width: 100%; margin: 0 auto; color: #e0e0e0;">
+    <section id="bio-section">
+        <h2>About Me</h2>
+        <p>
             My name is Garrett Bates, I'm 27 years old, my favorite color is blue, my favorite food is sushi & steak, and I'm passionate about IT & Cybersecurity. 
             I served in the United States Air Force for 4 years, and despite being a disabled Veteran, I continue to embrace every challenge with resilience & determination. 
             Faith & family is paramount to who I am. I cherish moments spent with loved ones and enjoy being there for them. Serving my church and volunteering in the Tri-Cities community fills me with purpose, allowing me to give back and connect with others in meaningful ways. 
@@ -91,74 +124,44 @@
             Not to mention, I have a particular love for coffee that fuels both my adventures and work. 
         </p>
     </section>
- <!-- Skills Section -->
-    <section id="skills-section" style="background-color: #444343; padding: 20px; border-radius: 10px; max-width: 600px; margin: 20px auto; text-align: center;">
-        <h2 style="font-size: 24px; font-weight: bold; color: #e0e0e0; padding: 10px;">Skills</h2>
-        <div style="font-size: 18px; line-height: 1.8; color: #00ffee;">
+
+    <!-- Skills Section -->
+    <section id="skills-section">
+        <h2>Skills</h2>
+        <div>
             <p>Cybersecurity</p>
             <p>Communication</p>
             <p>Data Visualization</p>
             <p>Network Security</p>
             <p>Digital Forensics</p>
         </div>
-        <ul id="skills-list" class="hidden" style="font-size: 18px; line-height: 1.8; color: #e0e0e0; list-style-type: none; padding: 0;">
-            <li>Content Creation</li>
-            <li>Cinematography</li>
-            <li>Photography</li>
-            <li>Motorcycle Riding</li>
-            <li>Drone Pilot</li>
-            <li>JavaScript</li>
-            <li>HTML</li>
-            <li>CSS</li>
-        </ul>
-        <button id="show-skills" style="display: block; margin: 10px auto;">Show More Skills</button>
     </section>
-    
 
     <!-- Education Section -->
-    <section id="education-section" style="background-color: #444343; padding: 20px; border-radius: 10px; max-width: 600px; margin: 20px auto; text-align: center;">
-        <h2 style="font-size: 24px; font-weight: bold; color: #e0e0e0; margin-bottom: 15px;">Education</h2>
-        
-        <p style="font-size: 18px; line-height: 1.8; color: #e0e0e0; margin-bottom: 10px;">
-            *Bachelor's of Science in <span style="color: #00ffee; font-weight: bold;">Cybersecurity</span style="color: #e0e0e0; font-weight: bold;">.
-        </p>
-        
-        <p style="font-size: 18px; line-height: 1.8; color: #e0e0e0; margin-bottom: 10px;">
-            American Military University, Graduated October 1st, 2024.
-        </p>
-        
-        <p style="font-size: 18px; line-height: 1.8; color: #e0e0e0; margin-bottom: 10px;">
-            Currently pursuing a Master's in Information Systems (GPA 3.6).
-        </p>
-    </section>  
+    <section id="education-section">
+        <h2>Education</h2>
+        <p>Bachelor's of Science in <span style="color: #00ffee; font-weight: bold;">Cybersecurity</span>.</p>
+        <p>American Military University, Graduated October 1st, 2024.</p>
+        <p>Currently pursuing a Master's in Information Systems (GPA 3.6).</p>
+    </section>
 
     <!-- Hobbies Section -->
-    <section id="hobbies-section" style="background-color: #444343; padding: 20px; border-radius: 10px; max-width: 600px; margin: 20px auto;">
-        <h2 style="font-size: 24px; font-weight: bold; color: #e0e0e0; text-align: center; padding: 10px;">Hobbies</h2>
-        <p id="hobbies-text" style="font-size: 18px; line-height: 2.5; color: #e0e0e0;">
+    <section id="hobbies-section">
+        <h2>Hobbies</h2>
+        <p>
             In my free time, I prioritize spending quality time with my family. However, I'm also a motorcycle and car enthusiast; 
             I love delving into everything related to IT & Cybersecurity, particularly in setting up networks and coding.
             I take pride in assembling over 24 custom PCs, establishing home networks, creating pen-testing labs, and experimenting with AI. 
             While I possess knowledge of Windows and various Linux distributions like Kali Linux, Ubuntu, and Parrot OS, I favor Mac OS over Windows.
         </p>
-        <p id="more-hobbies" class="hidden" style="font-size: 18px; line-height: 2.5; color: #e0e0e0;">
-            Before sustaining various injuries, I was into surfing and snowboarding, I also enjoyed running while maintaining my fitness. 
-            I'm a coffee connoisseur (local coffee is always better), and I still have a strong passion for traveling. 
-            Additionally, I'm drawn to flying FPV drones, I'm an avid content creator and I enjoy photography and video editing.
-        </p>
-        <button id="show-hobbies" style="display: block; margin: 10px auto;">Show More</button>
     </section>
-    
 
     <!-- Contact Section -->
-    <section id="contact-section" style="background-color: #444343; padding: 20px; border-radius: 10px; max-width: 600px; margin: 20px auto;">
-        <h2 style="font-size: 24px; font-weight: bold; line-height: 1.5; color: #e0e0e0; text-align: center; padding: 18px;">Contact</h2>
-        <p id="contact-info" class="hidden" style="font-size: 18px; color: #e0e0e0; line-height: 2;">
-            Email: <a href="mailto:garrettbates00@gmail.com" style="color: #00ffee;">garrettbates00@gmail.com</a><br>
-            Phone: <a href="(406) 402-7832" style="color: #00ffee;">(406) 402-7832</a><br>
-            LinkedIn: <a href="https://www.linkedin.com/in/g-bates/" style="color: #00ffee;">Garrett Bates</a><br>
-        </p>
-        <button id="show-contact" style="display: block; margin: 10px auto;">Show Contact Info</button>
+    <section id="contact-section">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:garrettbates00@gmail.com" style="color: #00ffee;">garrettbates00@gmail.com</a></p>
+        <p>Phone: <a href="tel:4064027832" style="color: #00ffee;">(406) 402-7832</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/g-bates/" style="color: #00ffee;">Garrett Bates</a></p>
     </section>
 
     <script>
@@ -166,11 +169,9 @@
         const toggleButton = document.getElementById('dark-mode-toggle');
         toggleButton.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
-            if (document.body.classList.contains('dark-mode')) {
-                toggleButton.textContent = 'Disable Dark Mode';
-            } else {
-                toggleButton.textContent = 'Enable Dark Mode';
-            }
+            toggleButton.textContent = document.body.classList.contains('dark-mode')
+                ? 'Disable Dark Mode'
+                : 'Enable Dark Mode';
         });
     </script>
 </body>
