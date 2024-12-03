@@ -2,13 +2,13 @@
 
 /* Title styling for Light Mode */
 body:not(.dark-mode) h1 {
-    color: #ADD8E6; /* Light blue color for title when light mode is active */
+    color: #444343; /* Light blue color for title when light mode is active */
 }
 
 /* About Me Section for Light Mode */
 body:not(.dark-mode) #bio-section {
     background-color: #ffffff; /* White background for About Me section in light mode */
-    color: #000; /* Black text in light mode */
+    color: #0000; /* Black text in light mode */
 }
 
 /* Default section styles */
