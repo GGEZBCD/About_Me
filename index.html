@@ -39,6 +39,16 @@
             box-shadow: 0 4px 20px rgba(0, 255, 251, 0.5);
         }
 
+        /* Light mode styling */
+        body:not(.dark-mode) h1 {
+            color: #ADD8E6; /* Light blue color for title when light mode is active */
+        }
+
+        body:not(.dark-mode) #bio-section {
+            background-color: #ffffff; /* White background for About Me section in light mode */
+            color: #000; /* Black text in light mode */
+        }
+
         /* Dark mode styles */
         body {
             background-color: #f2f2f2; /* Light gray for default */
@@ -53,6 +63,9 @@
 
         /* Dark mode button styles */
         #dark-mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
             padding: 10px 15px;
             background-color: #00ffee;
             border: none;
@@ -99,6 +112,9 @@
     </style>
 </head>
 <body>
+    <!-- Dark Mode Toggle Button -->
+    <button id="dark-mode-toggle">Enable Dark Mode</button>
+
     <header>
         <h1>Garrett Bates</h1>
         <div class="loading-bar-container">
@@ -106,11 +122,6 @@
         </div>
         <img src="https://github.com/GGEZBCD/About_Me/blob/main/Assets/GGEZ.PNG?raw=true" alt="Is This going to Work?" id="profile-image">
     </header>
-
-    <!-- Dark Mode Toggle Section -->
-    <section id="dark-mode-section" style="text-align: center; margin: 20px 0;">
-        <button id="dark-mode-toggle">Enable Dark Mode</button>
-    </section>
 
     <!-- Bio Section -->
     <section id="bio-section">
@@ -168,9 +179,7 @@
         const toggleButton = document.getElementById('dark-mode-toggle');
         toggleButton.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
-            toggleButton.textContent = document.body.classList.contains('dark-mode')
-                ? 'Disable Dark Mode'
-                : 'Enable Dark Mode';
+            toggleButton.textContent = document.body.classList.contains('dark-mode') ? 'Enable Light Mode' : 'Enable Dark Mode';
         });
     </script>
 </body>
