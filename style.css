@@ -1,4 +1,26 @@
 /*Last Edited by: Garrett Bates 12/02/2024*/
+
+/* Title styling for Light Mode */
+body:not(.dark-mode) h1 {
+    color: #ADD8E6; /* Light blue color for title when light mode is active */
+}
+
+/* About Me Section for Light Mode */
+body:not(.dark-mode) #bio-section {
+    background-color: #ffffff; /* White background for About Me section in light mode */
+    color: #000; /* Black text in light mode */
+}
+
+/* Default section styles */
+#bio-section {
+    background-color: #444343; /* Default for dark mode, will change in light mode */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
 article {
     width: clamp(200px, 50%, 600px);
 }
