@@ -60,26 +60,12 @@
             cursor: pointer;
             color: #000;
             font-weight: bold;
-            transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-            outline: none; /* Remove outline on focus */
-            box-shadow: none; /* Remove box-shadow */
+            transition: background-color 0.3s, color 0.3s;
         }
 
         #dark-mode-toggle:hover {
             background-color: #444343;
             color: #fff;
-        }
-
-        body.dark-mode #dark-mode-toggle {
-            background-color: #444343; /* Dark button in dark mode */
-            color: #fff; /* White text in dark mode */
-        }
-
-        /* Remove unwanted borders or shadows in dark mode */
-        body.dark-mode #dark-mode-toggle:focus,
-        body.dark-mode #dark-mode-toggle:active {
-            box-shadow: none; /* Remove any box-shadow when focused or clicked */
-            border: none; /* Remove any border */
         }
 
         /* Section styles for dark mode */
