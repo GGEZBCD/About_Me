@@ -1,4 +1,5 @@
 /*Last Edited by: Garrett Bates 12/02/2024*/
+
 article{
     width: clamp(200px, 50%, 600px);
 }
