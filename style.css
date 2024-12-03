@@ -1,27 +1,5 @@
 /*Last Edited by: Garrett Bates 12/02/2024*/
-
-/* Title styling for Light Mode */
-body:not(.dark-mode) h1 {
-    color: #444343; /* Light blue color for title when light mode is active */
-}
-
-/* About Me Section for Light Mode */
-body:not(.dark-mode) #bio-section {
-    background-color: #ffffff; /* White background for About Me section in light mode */
-    color: #0000; /* Black text in light mode */
-}
-
-/* Default section styles */
-#bio-section {
-    background-color: #444343; /* Default for dark mode, will change in light mode */
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 600px;
-    margin: 20px auto;
-    text-align: center;
-}
-
-article {
+article{
     width: clamp(200px, 50%, 600px);
 }
 
@@ -74,6 +52,10 @@ header {
     }
 }
 
+.hidden {
+    display: none; /* Hide elements */
+}
+
 /* Button Styles */
 button {
     background-color: #333;
@@ -89,7 +71,12 @@ button:hover {
     background-color: #555;
 }
 
-/* Skills Section */
+/* SKILLS SECTION */
+.hidden {
+    display: none;
+}
+
+/* Center the "Show More Skills" button */
 #show-skills {
     background-color: #333;
     color: white;
@@ -105,9 +92,14 @@ button:hover {
     background-color: #555;
 }
 
+/* Ensure hidden skills list is centered */
 #skills-list li {
     text-align: center;
     margin-bottom: 10px; /* Space between skills */
+}
+
+.hidden {
+    display: none;
 }
 
 /* Keyframes for border animation in a clockwise pattern */
@@ -145,6 +137,7 @@ button:hover {
     animation: rotateBorder 12s linear infinite; /* Smooth clockwise animation */
 }
 
+/* Optional: Add hover effect to speed up animation */
 #bio-section:hover:before {
     animation-duration: 5s; /* Speed up on hover */
 }
@@ -164,59 +157,17 @@ button:hover {
     background-color: #00ffee; /* Lighter blue on hover */
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-    width: 12px; /* Width of the scrollbar */
+
+#profile-image {
+    width: 100%; /* Adjusts the image width to be responsive to the container size */
+    max-width: 300px; /* Optional: limit the max width of the image */
+    height: auto; /* Maintains aspect ratio */
+    margin: 0 auto; /* Centers the image horizontally */
+    display: block; /* Ensures it's displayed as a block-level element */
 }
 
-::-webkit-scrollbar-track {
-    background: #1e1e1e; /* Matches the dark mode background */
-    border-radius: 6px; /* Rounded edges */
-}
-
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #009ca4, #0000ff); /* Gradient from purple to blue */
-    border-radius: 6px; /* Rounded edges */
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #033d43, #1e90ff); /* Slightly lighter gradient on hover */
-}
-
-/* Dark Mode Styles */
-body.dark-mode {
-    background-color: #1e1e1e;
-    color: #e0e0e0;
-}
-
-body.dark-mode a {
-    color: #00ffee;
-}
-
-body.dark-mode #dark-mode-toggle {
-    background-color: #444343;
-    color: #e0e0e0;
-}
-
-body.dark-mode section {
-    background-color: #2c2c2c;
-    color: #e0e0e0;
-}
-
-#dark-mode-toggle {
-    margin-left: 10px; /* Adds space between the name and the button */
-    padding: 5px 10px; /* Adjusts button size */
-    font-size: 16px; /* Matches the font size with your name */
-    background-color: #00ffee;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #000;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-#dark-mode-toggle:hover {
-    background-color: #444343;
-    color: #fff;
+#profile-image {
+    width: 300px;  /* Set a fixed size if necessary */
+    height: 300px;
+    object-fit: cover; /* Crop if necessary to fill */
 }
