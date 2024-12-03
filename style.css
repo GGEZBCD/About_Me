@@ -1,5 +1,6 @@
-/*Last Edited by: Garrett Bates 10/01/2024*/
-article{
+/*Last Edited by: Garrett Bates 12/02/2024*/
+
+article {
     width: clamp(200px, 50%, 600px);
 }
 
@@ -52,10 +53,6 @@ header {
     }
 }
 
-.hidden {
-    display: none; /* Hide elements */
-}
-
 /* Button Styles */
 button {
     background-color: #333;
@@ -71,12 +68,7 @@ button:hover {
     background-color: #555;
 }
 
-/* SKILLS SECTION */
-.hidden {
-    display: none;
-}
-
-/* Center the "Show More Skills" button */
+/* Skills Section */
 #show-skills {
     background-color: #333;
     color: white;
@@ -92,14 +84,9 @@ button:hover {
     background-color: #555;
 }
 
-/* Ensure hidden skills list is centered */
 #skills-list li {
     text-align: center;
     margin-bottom: 10px; /* Space between skills */
-}
-
-.hidden {
-    display: none;
 }
 
 /* Keyframes for border animation in a clockwise pattern */
@@ -137,7 +124,6 @@ button:hover {
     animation: rotateBorder 12s linear infinite; /* Smooth clockwise animation */
 }
 
-/* Optional: Add hover effect to speed up animation */
 #bio-section:hover:before {
     animation-duration: 5s; /* Speed up on hover */
 }
@@ -158,7 +144,6 @@ button:hover {
 }
 
 /* Custom Scrollbar */
-/* Last Edited by: Garrett Bates 11/28/2024 */
 ::-webkit-scrollbar {
     width: 12px; /* Width of the scrollbar */
 }
