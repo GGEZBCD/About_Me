@@ -53,9 +53,6 @@
 
         /* Dark mode button styles */
         #dark-mode-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
             padding: 10px 15px;
             background-color: #00ffee;
             border: none;
@@ -102,9 +99,6 @@
     </style>
 </head>
 <body>
-    <!-- Dark Mode Toggle Button -->
-    <button id="dark-mode-toggle">Enable Dark Mode</button>
-
     <header>
         <h1>Garrett Bates</h1>
         <div class="loading-bar-container">
@@ -112,6 +106,11 @@
         </div>
         <img src="https://github.com/GGEZBCD/About_Me/blob/main/Assets/GGEZ.PNG?raw=true" alt="Is This going to Work?" id="profile-image">
     </header>
+
+    <!-- Dark Mode Toggle Section -->
+    <section id="dark-mode-section" style="text-align: center; margin: 20px 0;">
+        <button id="dark-mode-toggle">Enable Dark Mode</button>
+    </section>
 
     <!-- Bio Section -->
     <section id="bio-section">
