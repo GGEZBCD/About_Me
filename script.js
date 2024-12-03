@@ -105,3 +105,18 @@ document.querySelectorAll('.project').forEach(project => {
         $(this).text($('#contact-info').hasClass('hidden') ? 'Show Contact Info' : 'Hide Contact Info');
     });
 });
+
+<script>
+    // JavaScript for Dark Mode Toggle
+    const toggleButton = document.getElementById('dark-mode-toggle');
+    toggleButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        if (document.body.classList.contains('dark-mode')) {
+            toggleButton.textContent = 'Disable Dark Mode';
+        } else {
+            toggleButton.textContent = 'Enable Dark Mode';
+        }
+    });
+</script>
+</body>
+
