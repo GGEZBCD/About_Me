@@ -7,53 +7,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Garrett Bates</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Stylish font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         /* Add custom styling for the image */
         #profile-image {
-            max-width: 512px; /* Adjust this value as needed */
+            max-width: 512px;
             display: block;
-            margin: 20px auto; /* Center the image */
-            object-fit: cover; /* Ensures the image covers the square dimensions */
-            height: 300px; /* Set a fixed height for the square shape */
-            transition: transform 1s ease, box-shadow 1s ease; /* Animation effect */
-            animation: loadingAnimation 4s ease-in-out forwards; /* Image loading animation */
+            margin: 20px auto;
+            object-fit: cover;
+            height: 300px;
+            transition: transform 1s ease, box-shadow 1s ease;
+            animation: loadingAnimation 4s ease-in-out forwards;
         }
 
-        /* Loading animation for the image */
         @keyframes loadingAnimation {
             0% {
-                transform: scale(0.2); /* Start smaller */
-                opacity: 1; /* Start invisible */
+                transform: scale(0.2);
+                opacity: 0;
             }
             35% {
-                opacity: 1; /* Fade in */
+                opacity: 1;
             }
             100% {
-                transform: scale(1); /* Scale to normal size */
+                transform: scale(1);
             }
         }
 
-        /* Hover effect for the profile image */
         #profile-image:hover {
-            transform: scale(1.1); /* Scale up the image */
-            box-shadow: 0 4px 20px rgba(0, 255, 251, 0.5); /* Add shadow */
+            transform: scale(1.1);
+            box-shadow: 0 4px 20px rgba(0, 255, 251, 0.5);
+        }
+
+        /* Dark mode button styles */
+        #dark-mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            background-color: #00ffee;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #000;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #dark-mode-toggle:hover {
+            background-color: #444343;
+            color: #fff;
         }
     </style>
 </head>
-
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garrett Bates</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
 <body>
+    <!-- Dark Mode Toggle Button -->
+    <button id="dark-mode-toggle">Enable Dark Mode</button>
+
     <header>
         <h1>Garrett Bates</h1>
         <div class="loading-bar-container">
@@ -61,7 +71,6 @@
         </div>
         <img src="https://github.com/GGEZBCD/About_Me/blob/main/Assets/GGEZ.PNG?raw=true" alt="Is This going to Work?" id="profile-image">
     </header>
-
 
     <!-- Bio Section -->
     <section id="bio-section" style="background-color: #444343; padding: 20px; border-radius: 10px; max-width: 600px; margin: 20px auto;">
@@ -78,9 +87,7 @@
             Not to mention, I have a particular love for coffee that fuels both my adventures and work. 
         </p>
     </section>
-
-    
-    <!-- Skills Section -->
+ <!-- Skills Section -->
     <section id="skills-section" style="background-color: #444343; padding: 20px; border-radius: 10px; max-width: 600px; margin: 20px auto; text-align: center;">
         <h2 style="font-size: 24px; font-weight: bold; color: #e0e0e0; padding: 10px;">Skills</h2>
         <div style="font-size: 18px; line-height: 1.8; color: #00ffee;">
@@ -149,8 +156,18 @@
         </p>
         <button id="show-contact" style="display: block; margin: 10px auto;">Show Contact Info</button>
     </section>
-    
 
-    <script src="script.js"></script>
+    <script>
+        // JavaScript for Dark Mode Toggle
+        const toggleButton = document.getElementById('dark-mode-toggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                toggleButton.textContent = 'Disable Dark Mode';
+            } else {
+                toggleButton.textContent = 'Enable Dark Mode';
+            }
+        });
+    </script>
 </body>
 </html>
