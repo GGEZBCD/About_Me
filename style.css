@@ -7,13 +7,10 @@ article{
 body {
     font-family: 'Electrolize', sans-serif;
 }
-h1 {
-    font-family: 'Electrolize', sans-serif;
-}
-
 
 /* Style for About Me Title -- "Garrett Bates" */
 h1 {
+    font-family: 'Electrolize', sans-serif;
     font-size: 48px;
     font-weight: bold;
     color: #e0e0e0;
