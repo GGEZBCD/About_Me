@@ -5,7 +5,9 @@ article{
 }
 
 body {
-    font-family: 'Electrolize', sans-serif;
+    background-color: #333333; /* Dark gray background */
+    margin: 0; /* Removes default margin */
+    font-family: 'Electrolize', sans-serif; /* Use your preferred font */
 }
 
 /* Style for About Me Title -- "Garrett Bates" */
@@ -170,9 +172,5 @@ button:hover {
     object-fit: cover; /* Crop if necessary to fill */
 }
 
-body {
-    background-color: #333333; /* Dark gray background */
-    margin: 0; /* Removes default margin */
-    font-family: 'Electrolize', sans-serif; /* Use your preferred font */
-}
+
 
