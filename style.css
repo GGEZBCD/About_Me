@@ -5,9 +5,10 @@ article{
 }
 
 body {
-    background-color: #1e1e1e; /* Dark theme */
-}
-
+    background-color: #1e1e1e; /* Change to your preferred background color */
+    color: #e0e0e0; /* Ensure text is readable on the dark background */
+    margin: 0;
+    font-family: 'Electrolize', sans-serif;
 }
 
 /* Style for About Me Title -- "Garrett Bates" */
