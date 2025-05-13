@@ -1,4 +1,4 @@
-/*Last Edited by: Garrett Bates 05/12/2025*/
+/*Last Edited by: Garrett Bates 12/02/2024*/
 
 article{
     width: clamp(200px, 50%, 600px);
@@ -171,34 +171,4 @@ button:hover {
     width: 300px;  /* Set a fixed size if necessary */
     height: 300px;
     object-fit: cover; /* Crop if necessary to fill */
-}
-
-/* Typewriter Styles */
-#typewriter {
-    font-size: 3rem;
-    color: #e0e0e0;
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 0.1em solid #e0e0e0;
-    animation: typing 6s steps(13, end) 1s forwards, blink-caret 0.75s step-end infinite 7s;
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 13ch;
-    }
-}
-
-@keyframes blink-caret {
-    50% {
-        border-color: transparent;
-    }
-}
-
-.no-cursor {
-    border-right: none !important;
 }
