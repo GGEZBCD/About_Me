@@ -1,5 +1,4 @@
-<!--Last Edited by Garrett Bates 23 DEC 2024-->
-
+<!--Last Edited by Garrett Bates 25 May 2025-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,95 +6,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Garrett Bates</title>
-    <link rel="stylesheet" href="style.css">
-    <head>
+
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
     <style>
-        /* Add custom styling for the image */
-        #profile-image {
-            max-width: 512px; /* Adjust this value as needed */
-            display: block;
-            margin: 20px auto; /* Center the image */
-            object-fit: cover; /* Ensures the image covers the square dimensions */
-            height: 300px; /* Set a fixed height for the square shape */
-            transition: transform 1s ease, box-shadow 1s ease; /* Animation effect */
-            animation: loadingAnimation 4s ease-in-out forwards; /* Image loading animation */
+        body {
+            background-color: #2d2d2d;
+            color: #e0e0e0;
+            font-family: 'Electrolize', sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
-        /* Loading animation for the image */
+        #profile-image {
+            max-width: 512px;
+            display: block;
+            margin: 20px auto;
+            object-fit: cover;
+            height: 300px;
+            transition: transform 1s ease, box-shadow 1s ease;
+            animation: loadingAnimation 4s ease-in-out forwards;
+        }
+
         @keyframes loadingAnimation {
             0% {
-                transform: scale(0.2); /* Start smaller */
-                opacity: 1; /* Start invisible */
+                transform: scale(0.2);
+                opacity: 0;
             }
             35% {
-                opacity: 1; /* Fade in */
+                opacity: 1;
             }
             100% {
-                transform: scale(1); /* Scale to normal size */
+                transform: scale(1);
             }
         }
 
-        /* Hover effect for the profile image */
         #profile-image:hover {
-            transform: scale(1.1); /* Scale up the image */
-            box-shadow: 0 4px 20px rgba(0, 255, 251, 0.5); /* Add shadow */
+            transform: scale(1.1);
+            box-shadow: 0 4px 20px rgba(0, 255, 251, 0.5);
+        }
+
+        #typewriter {
+            font-size: 3rem;
+            color: #e0e0e0;
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 0.1em solid #e0e0e0;
+            animation: typing 4s steps(13) 1s forwards, blink-caret 0.75s step-end 3; /* Blinks 3 times */
+        }
+
+        @keyframes typing {
+            100% {
+                width: 13ch; /* Matches the length of "|Garrett Bates" */
+            }
+        }
+
+        @keyframes blink-caret {
+            0%, 100% { border-color: transparent; }
+            50% { border-color: #e0e0e0; }
+        }
+
+        .no-cursor {
+            border-right: transparent !important; /* Stops the cursor blinking */
         }
     </style>
-</head>
 
-<style>
-    body {
-        background-color: #2d2d2d; /* Dark grey */
-        color: #e0e0e0; /* Light text color for contrast */
-        font-family: 'Electrolize', sans-serif;
-        margin: 0;
-        padding: 0;
+    <!-- Typewriter Script -->
+<script>
+    const txt = "Garrett Bates";
+    let i = 0;
+    const speed = 100;
+
+    function typeWriter() {
+        const element = document.getElementById("typewriter");
+        if (i < txt.length) {
+            element.innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        } else {
+            element.classList.add("no-cursor"); // Cleanly remove the cursor after typing
+        }
     }
-</style>
 
-    
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garrett Bates</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
+    window.onload = typeWriter;
+</script>
+
 <body>
     <header>
-        <h1>Garrett Bates</h1>
+        <h1 id="typewriter"></h1>
         <div class="loading-bar-container">
             <div class="loading-bar"></div>
         </div>
-        <img src="https://github.com/GGEZBCD/About_Me/blob/main/Assets/GGEZ.PNG?raw=true" alt="Profile Picture" id="profile-image">
+        <img src="/Users/garrettbates/Documents/IT/CODE/About Me/About_Me_Page_Local/Assets/GGEZ.PNG" alt="Profile Picture" id="profile-image">
     </header>
 
     <!-- Bio Section -->
     <section id="bio-section" style="background-color: #444343; padding: 20px; border-radius: 10px; max-width: 600px; margin: 20px auto;">
-        <h2 id="bio-heading" style="font-size: 24px; font-weight: bold; color: #e0e0e0; text-align: center; padding: 10px;">
-            <span class="bio-box" style="display: inline-block; padding: 10px 20px; border-radius: 8px; font-size: 24px;">
-                About Me
-            </span>
-        </h2>
-        <p id="bio-text" style="font-size: 18px; line-height: 2.5; max-width: 100%; margin: 0 auto; color: #e0e0e0;">
+        <h2 style="font-size: 24px; font-weight: bold; color: #e0e0e0; text-align: center;">About Me</h2>
+        <p style="font-size: 18px; line-height: 2.5;">
             My name is Garrett Bates. I was born in 1997, my favorite food is sushi, and I'm passionate about IT & Cybersecurity. 
             I served in the United States Air Force for 4 years, and despite being a disabled Veteran, I continue to embrace every challenge with resilience & determination. 
             Faith & Family is paramount to who I am. I cherish moments spent with loved ones and enjoy being there for them. Serving my church and volunteering in the Tri-Cities community fills me with purpose, allowing me to give back and connect with others in meaningful ways. 
-            Outside of my technical interests, I'm an explorer at heart, whether it's adventuring and discovering places to travel or expirementing with new technology, I'm always looking to broaden my horizons. 
+            Outside of my technical interests, I'm an explorer at heart, whether it's adventuring and discovering places to travel or experimenting with new technology, I'm always looking to broaden my horizons. 
             Additionally, I have a particular love for coffee, which fuels both my adventures and work. 
         </p>
     </section>
 
-    
     <!-- Skills Section -->
     <section id="skills-section" style="background-color: #444343; padding: 20px; border-radius: 10px; max-width: 600px; margin: 20px auto; text-align: center;">
-        <h2 style="font-size: 24px; font-weight: bold; color: #e0e0e0; padding: 10px;">Skills</h2>
+        <h2 style="font-size: 24px; font-weight: bold; color: #e0e0e0;">Skills</h2>
         <div style="font-size: 18px; line-height: 1.8; color: #00ffee;">
             <p>Adaptability</p>
             <p>Communication</p>
@@ -103,7 +130,7 @@
             <p>Network Security</p>
             <p>Digital Forensics</p>
         </div>
-        <ul id="skills-list" class="hidden" style="font-size: 18px; line-height: 1.8; color: #e0e0e0; list-style-type: none; padding: 0;">
+        <ul id="skills-list" class="hidden" style="font-size: 18px; color: #e0e0e0; list-style-type: none; padding: 0;">
             <li>Penetration Testing</li>
             <li>Content Creation</li>
             <li>Cinematography</li>
@@ -114,58 +141,50 @@
             <li>JavaScript</li>
             <li>HTML & CSS</li>
         </ul>
-        <button id="show-skills" style="display: block; margin: 10px auto;">Show More Skills</button>
+        <button id="show-skills" style="margin-top: 10px;">Show More Skills</button>
     </section>
-    
 
     <!-- Education Section -->
     <section id="education-section" style="background-color: #444343; padding: 20px; border-radius: 10px; max-width: 600px; margin: 20px auto; text-align: center;">
-        <h2 style="font-size: 24px; font-weight: bold; color: #e0e0e0; margin-bottom: 15px;">Education</h2>
-        
-        <p style="font-size: 18px; line-height: 1.8; color: #e0e0e0; margin-bottom: 10px;">
-            *Bachelor's of Science in <span style="color: #00ffee; font-weight: bold;">Cybersecurity</span style="color: #e0e0e0; font-weight: bold;">.
-        </p>
-        
-        <p style="font-size: 18px; line-height: 1.8; color: #e0e0e0; margin-bottom: 10px;">
-            American Military University, Graduated with Honors on October 1st, 2024.
-        </p>
-        
-        <p style="font-size: 18px; line-height: 1.8; color: #e0e0e0; margin-bottom: 10px;">
-            Currently pursuing a Master's in Information Technology with a concentration on Information Assurance and Security (GPA 3.8).
-        </p>
-    </section>    
+        <h2 style="font-size: 24px; font-weight: bold; color: #e0e0e0;">Education</h2>
+        <p style="font-size: 18px;">*Bachelor's of Science in <span style="color: #00ffee; font-weight: bold;">Cybersecurity</span>.</p>
+        <p style="font-size: 18px;">American Military University, Graduated with Honors on October 1st, 2024.</p>
+        <p style="font-size: 18px;">Currently pursuing a Master's in Information Technology with a concentration on Information Assurance and Security (GPA 3.8).</p>
+    </section>
 
     <!-- Hobbies Section -->
     <section id="hobbies-section" style="background-color: #444343; padding: 20px; border-radius: 10px; max-width: 600px; margin: 20px auto;">
-        <h2 style="font-size: 24px; font-weight: bold; color: #e0e0e0; text-align: center; padding: 10px;">Hobbies</h2>
-        <p id="hobbies-text" style="font-size: 18px; line-height: 2.5; color: #e0e0e0;">
-            In my free time, I prioritize spending quality time with my family. However, I'm also a motorcycle and car enthusiast; 
-            I love delving into everything related to IT & Cybersecurity, particularly digital forensics, networking and coding.
-            I take pride in assembling over 24 custom PCs, establishing home networks, creating pen-testing labs, and experimenting with AI. 
-            While I possess knowledge of Windows and various Linux distributions like Kali Linux, Ubuntu, and Parrot OS, I typically prefer Mac OS over other operating systems for simplicity
-            and ease of use.
+        <h2 style="font-size: 24px; font-weight: bold; color: #e0e0e0; text-align: center;">Hobbies</h2>
+        <p style="font-size: 18px; line-height: 2.5;">
+            In my free time, I prioritize spending quality time with my family. However, I'm also a motorcycle and car enthusiast. 
+            I love delving into everything related to IT & Cybersecurity, particularly digital forensics, networking, and coding.
+            I’ve assembled over 24 custom PCs, built home networks, created pen-testing labs, and experimented with AI. 
+            I prefer macOS for its simplicity and usability, though I'm proficient in Windows and Linux (Kali, Ubuntu, Parrot).
         </p>
-        <p id="more-hobbies" class="hidden" style="font-size: 18px; line-height: 2.5; color: #e0e0e0;">
-            Before sustaining various injuries, I was into surfing and snowboarding, I also enjoyed running while maintaining my fitness. 
-            I'm a coffee connoisseur (local coffee is always better), and I still enjoy traveling despite my setbacks. 
-            Additionally, I help individuals and organizations produce content which allows me to continue my passion for photography and video editing.
+        <p id="more-hobbies" class="hidden" style="font-size: 18px; line-height: 2.5;">
+            Before sustaining injuries, I was into surfing and snowboarding. I also enjoyed running for fitness. 
+            I'm a coffee connoisseur (local coffee is always better) and still enjoy traveling. 
+            Additionally, I help individuals and organizations produce content, allowing me to continue pursuing photography and video editing.
         </p>
         <button id="show-hobbies" style="display: block; margin: 10px auto;">Show More</button>
     </section>
-    
 
     <!-- Contact Section -->
     <section id="contact-section" style="background-color: #444343; padding: 20px; border-radius: 10px; max-width: 600px; margin: 20px auto;">
-        <h2 style="font-size: 24px; font-weight: bold; line-height: 1.5; color: #e0e0e0; text-align: center; padding: 18px;">Contact</h2>
-        <p id="contact-info" class="hidden" style="font-size: 18px; color: #e0e0e0; line-height: 2;">
+        <h2 style="font-size: 24px; font-weight: bold; color: #e0e0e0; text-align: center;">Contact</h2>
+        <p id="contact-info" class="hidden" style="font-size: 18px; color: #e0e0e0;">
             Email: <a href="mailto:garrettbates00@gmail.com" style="color: #00ffee;">garrettbates00@gmail.com</a><br>
-            Phone: <a href="(406) 402-7832" style="color: #00ffee;">(406) 402-7832</a><br>
-            LinkedIn: <a href="https://www.linkedin.com/in/g-bates/" style="color: #00ffee;">Garrett Bates</a><br>
+            Phone: <a href="tel:+14064027832" style="color: #00ffee;">(406) 402-7832</a><br>
+            LinkedIn: <a href="https://www.linkedin.com/in/g-bates/" style="color: #00ffee;">Garrett Bates</a>
         </p>
         <button id="show-contact" style="display: block; margin: 10px auto;">Show Contact Info</button>
     </section>
-    
 
-    <script src="script.js"></script>
+    <script>
+        // Toggle hidden sections
+        $("#show-skills").click(() => $("#skills-list").slideToggle());
+        $("#show-hobbies").click(() => $("#more-hobbies").slideToggle());
+        $("#show-contact").click(() => $("#contact-info").slideToggle());
+    </script>
 </body>
 </html>
