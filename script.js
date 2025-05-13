@@ -1,4 +1,4 @@
-//Last Edited by: Garrett Bates (11/29/2024)
+//Last Edited by: Garrett Bates (05/12/2025)
 
 
 $(document).ready(function() { 
@@ -106,3 +106,7 @@ document.querySelectorAll('.project').forEach(project => {
         $(this).text($('#contact-info').hasClass('hidden') ? 'Show Contact Info' : 'Hide Contact Info');
     });
 });
+
+var i = 0;
+var txt = 'Lorem ipsum typing effect!'; /* The text */
+var speed = 50; /* The speed/duration of the effect in milliseconds */
