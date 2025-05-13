@@ -1,4 +1,4 @@
-//Last Edited by: Garrett Bates (05/12/2025)
+//Last Edited by: Garrett Bates (11/29/2024)
 
 
 $(document).ready(function() { 
@@ -15,7 +15,7 @@ $(document).ready(function() {
         $(this).css('transform', `translate(${moveX}px, ${moveY}px)`);
     });
 
-    // Reset the position of "Garrett Bates" when mouse leaves the h1 area
+    // Reset the position of "Garrett Bates" when mouse leaves the h1 (header) area
     $header.on('mouseleave', function () {
         $(this).css('transform', 'translate(0px, 0px)');
     });
@@ -106,7 +106,3 @@ document.querySelectorAll('.project').forEach(project => {
         $(this).text($('#contact-info').hasClass('hidden') ? 'Show Contact Info' : 'Hide Contact Info');
     });
 });
-
-var i = 0;
-var txt = 'Lorem ipsum typing effect!'; /* The text */
-var speed = 50; /* The speed/duration of the effect in milliseconds */
